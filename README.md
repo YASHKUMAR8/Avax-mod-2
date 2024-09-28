@@ -12,15 +12,15 @@ This Solidity contract allows farmers to list their products for sale and for cu
 The contract is deployed by an owner, who will have control over certain functionalities within the contract. The owner is the address that deploys the contract.
 
 ### Key Functions
-#### * listProduct:
+#### listProduct:
    * Allows a farmer to list a product by providing a name and price (in wei).
    * The function increments the productIdCounter and stores the product details in a mapping.
    * Emits the ProductListed event when a product is successfully listed.
-#### * buyProduct:
+#### buyProduct:
    * Allows a user to purchase a product by sending the required amount of Ether.
    * Transfers the payment to the seller's address and marks the product as sold.
    * Emits the ProductSold event when a product is purchased.
-#### * getFarmerProducts:
+#### getFarmerProducts:
    * Fetches all product IDs listed by a specific farmer.
 ### Events
 * ProductListed: Emitted when a new product is listed by a farmer.
@@ -345,6 +345,137 @@ async function buyProduct() {
 </html>
 ```
 4. CSS File: Create a CSS file (style.css) and add the following code:
+```
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5em;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: #34495e;
+  margin-bottom: 15px;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="number"] {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 1.1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Buttons */
+button {
+  padding: 12px 25px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #2ecc71;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Farmer Products List */
+#farmerProducts {
+  margin-top: 20px;
+  text-align: left;
+}
+
+#farmerProducts p {
+  background: #ecf0f1;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border-left: 5px solid #27ae60;
+  font-size: 1.1em;
+}
+
+/* Alerts and Messages */
+.alert {
+  padding: 10px;
+  background-color: #e74c3c;
+  color: white;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.alert-success {
+  background-color: #2ecc71;
+}
+
+.alert-warning {
+  background-color: #f39c12;
+}
+
+.alert-info {
+  background-color: #3498db;
+}
+
+.alert-close {
+  float: right;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.alert-close:hover {
+  color: #e74c3c;
+}
+
+/* Utility Classes */
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+```
 ## Installation and Usage
 1. Prerequisites: You will need the following to interact with this contract:
 * A local or remote Ethereum node (e.g., Ganache, Infura)
